@@ -1,0 +1,63 @@
+package com.example.Compilador;
+
+public enum TokenType {
+             IDENTIFICADOR
+,
+             ENTERO
+,
+             FLOTANTE
+,
+             CADENA
+,
+             BOLEANO
+,
+             PARENTESIS_ABRE
+,
+             PARENTESIS_CIERRA
+,
+             LLAVE_ABRE
+,
+             LLAVE_CIERRA
+,
+             MAYOR_QUE
+,
+             MENOR_QUE
+,
+             MENOR_IGUAL_QUE
+,
+             MAYOR_IGUAL_QUE
+,
+             IGUAL_QUE
+,
+             NO_IGUAL_QUE
+,
+             OPERADOR_SUMA
+,
+             OPERADOR_MULTIPLICACION
+,
+             OPERADOR_DIVISION
+,
+             OPERADOR_RESTA
+,
+             OPERADOR_OR
+,
+             OPERADOR_AND
+,
+             OPERADOR_NOT
+,
+             OPERADOR_ASIGNACION
+,
+             DEFINE_TIPO
+,
+             IF_ABRE
+,
+            TIPO_BOLEANO
+,
+            TIPO_CADENA
+,
+            TIPO_FLOTANTE
+,
+            TIPO_ENTERO
+,
+            DESCONOCIDO
+}
