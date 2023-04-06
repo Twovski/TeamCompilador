@@ -1,9 +1,9 @@
-# compilador
+# Compilador
 
-## gramatica
+## Gramatica
 
 ~~~ plain
-programa -> (declaracion)* | (sentencia)*
+programa -> (declaracion)* | (sentencia)* | e
 declaracion -> (declaracion_variable)*
 
 declaracion_variable -> (identificador ":" tipo) | (identificador ":" tipo "=" valor)
@@ -16,8 +16,8 @@ digito -> (0-9)
 tipo -> "int" | "float" | "bool" | "string"
 valor -> entero | flotante | boleano | cadena
 
-entero -> ("-" | "") (0-9)+
-flotante -> ("-" | "") (0-9)+ "." (0-9)+
+entero -> ("-" | "+") (0-9)+
+flotante -> ("-" | "+") (0-9)+ "." (0-9)+
 boleano -> "true" | "false"
 cadena -> (caracter)*
 caracter -> cualquier carácter ASCII excepto comillas dobles o simples
@@ -41,10 +41,11 @@ condicional -> condicional_if
 operador_comparacion -> (">"|"<"|"<="|">="|"=="|"!=")
 
 expresion_boleana -> expresion_boleana_prima |
-                     "not" expresion_boleana
-                     expresion_boleana "and" expresion_boleana
-                     expresion_boleana "or" expresion_boleana     
-
+                     "not" expresion_boleana |
+                     expresion_boleana "and" expresion_boleana |
+                     expresion_boleana "or" expresion_boleana  |
+                     boleano
+                     
 expresion_boleana_prima -> expresion_aritmetica (operador_comparacion) expresion_aritmetica
 
 condicional_if -> "if" "(" expresion_boleana ")" bloque
