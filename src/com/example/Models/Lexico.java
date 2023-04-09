@@ -1,4 +1,4 @@
-package com.example.Compilador;
+package com.example.Models;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -173,30 +173,14 @@ public class Lexico {
     public boolean isTipoFlotante(String token){return token.matches(tipoFlotante);}
     public boolean isTipoEntero(String token){return token.matches(tipoEntero);}
 
-    public static void main(String[] args) {
-        String a = """
-                a:bool=true
-                if(){}
-                b:float=1.0
-                x:float=1.0
-                c:float=b+x/1.0
-                nota
-                """;
-        Lexico lexico = new Lexico(a);
-
-        Scanner scanner = new Scanner(lexico.input);
-
-        while (scanner.hasNext()) {
+    public ArrayList<Token> scan(){
+        Scanner scanner = new Scanner(input);
+        while(scanner.hasNext()){
             String token = scanner.next();
-            lexico.addToken(token);
-            System.out.println(token);
-
-        }
-        System.out.println("===================");
-        for (Token item: lexico.tokens){
-            System.out.println(item);
+            addToken(token);
         }
 
+        return tokens;
     }
 
 }

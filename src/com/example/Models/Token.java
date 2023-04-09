@@ -1,4 +1,4 @@
-package com.example.Compilador;
+package com.example.Models;
 
 public class Token {
     private final TokenType tipo;
