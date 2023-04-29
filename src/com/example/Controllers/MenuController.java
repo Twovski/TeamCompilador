@@ -86,10 +86,6 @@ public class MenuController implements Initializable {
 
     }
     @FXML
-    private void actionSyntactic(){
-
-    }
-    @FXML
     private void actionLexical() throws IOException {
         lexical.setDisable(true);
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/Views/Lexico.fxml"));
