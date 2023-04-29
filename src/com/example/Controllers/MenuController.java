@@ -104,6 +104,11 @@ public class MenuController implements Initializable {
     }
 
     @FXML
+    public void actionSyntactic(){
+
+    }
+
+    @FXML
     private void actionExit(){
         Stage stage = (Stage) border.getScene().getWindow();
         stage.close();
